@@ -27,37 +27,37 @@ GPO（グループポリシーオブジェクト）を利用し、Windows Hello�
 
 ツール＞ユーザとコンピュータ
 
-![image.png](zenn-content/images/)
+![image.png](../images/ドメイン参加端末のWindowshello/image.png)
 
 操作＞新規作成＞組織単位（OU）
 
-![image.png](image%201.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image1.png)
 
 名前を付ける
 
-![image.png](image%202.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image2.png)
 
 適用したいコンピュータオブジェクト（ONPRE-WIN11-1）を作成したOU（LocalOU）へ移動させる
 
-![image.png](image%203.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image3.png)
 
 ## GPO作成
 
 ツール＞グループポリシー管理
 
-![image.png](image%204.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image4.png)
 
 グループポリシーオブジェクト＞右クリック＞新規＞
 
-![image.png](image%205.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image4.png)
 
 名前を付ける
 
-![image.png](image%206.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image5.png)
 
 右クリック＞編集
 
-![image.png](image%207.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image6.png)
 
 コンピュータの構成＞ポリシー＞管理用テンプレート＞システム＞ログオン＞便利なPINを使用したサインインをオンにする
 
@@ -68,27 +68,27 @@ GPO（グループポリシーオブジェクト）を利用し、Windows Hello�
 
 </aside>
 
-![image.png](image%208.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image7.png)
 
 デフォルトは未構成であるため、「有効」をクリックし、適用
 
 ※ヘルプに記載の通り、無効もしくは未構成の場合、Windows hello(便利なPIN)は設定できない。
 
-![image.png](image%209.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image8.png)
 
 有効となったことを確認
 
-![image.png](image%2010.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image9.png)
 
 グループポリシーの管理の画面に戻り、作成したGPOを適用したいOU（LocalOU）へドラック。
 
 確認画面が表示されるので、OKをクリック
 
-![image.png](image%2011.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image10.png)
 
 作成したGPOが、LocalOUの配下に入ったことを確認
 
-![image.png](image%2012.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image11.png)
 
 # 検証結果
 
@@ -100,21 +100,21 @@ GPO（グループポリシーオブジェクト）を利用し、Windows Hello�
 
 ※今回は仮想マシンとして作成しており、顔・指紋は利用できないがPINが利用できる
 
-![image.png](image%2013.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image12.png)
 
-![image.png](image%2014.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image13.png)
 
 デフォルトのPIN要件が設定されています。（詳細は後述）
 
 PINを設定します。
 
-![image.png](image%2015.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image14.png)
 
-![image.png](image%2016.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image15.png)
 
 一度PCからサインアウトすると、サインインオプションとしてPINが選択できるようになります！
 
-![image.png](image%2017.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image16.png)
 
 # おまけ　PINの複雑さについて
 
@@ -135,7 +135,7 @@ Windows hello for businessという名称のテンプレートですが、今回
 
 </aside>
 
-![image.png](image%2018.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image17.png)
 
 試しに、
 
@@ -143,17 +143,17 @@ Windows hello for businessという名称のテンプレートですが、今回
 
 「PINの最大文字数」を未構成から有効（20文字）へ変更する。（もとのPINは９文字で設定）
 
-![image.png](image%2019.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image18.png)
 
-![image.png](image%2020.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image19.png)
 
 作成したGPOをLocalOUへ紐づけする
 
-![image.png](image%2021.png)
+![image.png](../images/ドメイン参加端末のWindowshello/image20.png)
 
 GPOが適用されるよう端末を再起動すると、変更したPINの要件に従い、変更するように要求されることが確認できる。
 
-![image.png](image%2022.png)
+![image.png]../images/ドメイン参加端末のWindowshello/image21.png)
 
 # 結論
 

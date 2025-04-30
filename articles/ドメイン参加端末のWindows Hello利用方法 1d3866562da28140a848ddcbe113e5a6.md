@@ -1,3 +1,12 @@
+---
+title: "ドメイン参加端末のWindows hello"
+emoji: "🎶"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: [ActiveDirectry]
+published: false
+---
+
+
 # ドメイン参加端末のWindows Hello利用方法
 
 # 実現したいこと
@@ -18,7 +27,7 @@ GPO（グループポリシーオブジェクト）を利用し、Windows Hello�
 
 ツール＞ユーザとコンピュータ
 
-![image.png](image.png)
+![image.png](zenn-content/images/)
 
 操作＞新規作成＞組織単位（OU）
 
